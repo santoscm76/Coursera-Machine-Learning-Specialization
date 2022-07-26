@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import MaxNLocator
 from matplotlib.gridspec import GridSpec
 from matplotlib.colors import LinearSegmentedColormap
+from matplotlib.colors import colorConverter
 from ipywidgets import interact
 # from lab_utils_common import compute_cost
 # from lab_utils_common import dlblue, dlorange, dldarkred, dlmagenta, dlpurple, dlcolors
@@ -17,7 +18,10 @@ n_bin = 5
 #        'dl_map', dlcolors, N=n_bin)
 
 dlcm = LinearSegmentedColormap.from_list(
-        'dl_map', None, N=n_bin)
+        'dl_map', [
+        colorConverter.to_rgba(c)
+        for c in ["#fff1d7", "#ffda9d", "#ffb362", "#ff8241", "#ff2b29", "#d60026", "#880028",]
+    ], N=n_bin)
 ##########################################################
 # Plotting Routines
 ##########################################################
