@@ -13,9 +13,11 @@ from ipywidgets import interact
 
 # plt.style.use('./deeplearning.mplstyle')
 n_bin = 5
-dlcm = LinearSegmentedColormap.from_list(
-        'dl_map', dlcolors, N=n_bin)
+#dlcm = LinearSegmentedColormap.from_list(
+#        'dl_map', dlcolors, N=n_bin)
 
+dlcm = LinearSegmentedColormap.from_list(
+        'dl_map', None, N=n_bin)
 ##########################################################
 # Plotting Routines
 ##########################################################
